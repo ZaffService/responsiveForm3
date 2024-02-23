@@ -1,150 +1,180 @@
-*{
+/* Styles de base communs à tous les appareils */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-
-.container{
-    margin: 0 auto;
-    width: 70%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:#AC5C74;
-
-}
-
-.form-users{
-    height: 500px;
-    background-color: #04014E;
-    padding-top: 5%;
-    margin-left: 20%;
-    margin-right: 0;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-h1{
-    text-transform: capitalize;
-    font-size: 40px;
-    font-weight: bold;
-    color: #AC5C74;
-}
-
-.imageBox{
+section {
     position: relative;
-    margin-right: 20%;
-    height: 500px;
-    padding-top: 0%;
-    width: 29%;
     display: flex;
-    flex-direction: column;
-    background-color: rgba(251, 197, 214, 0.5);
-    border-right:2px solid  rgba(251, 197, 214, 0.5);
-    border-bottom:2px solid  rgba(251, 197, 214, 0.5);
+    height: 100vh;
+    width: 100%;
 }
 
-.btn{
-    width: 30px;
+section .img {
+    position: relative;
+    margin-top: 1%;
+    left: 0;
+    width: 100%;
+    height: 680px;
+    background: url('form2.png');
+    background-position: center;
+    background-size: cover;
 }
 
-.reverse{
+section .contenu {
+    margin-top: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 680px;
+    background-color: rgb(34, 25, 25);
 }
 
-
-input{
-    margin: 20px;
-    padding: 5px;
-    width: 200px;
-    height: 20px;
+section .contenu .formulaire h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    display: inline-block;
 }
 
-::placeholder{
+label {
+    color: rgb(209, 169, 126);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+input::placeholder {
     color: white;
     font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-
-input, textarea, select{
-    margin-left: 80px;
-}
-input,select{
+.input input {
     border: none;
     outline: none;
+    border-bottom: 1px solid rgb(209, 169, 126);
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #607d8b;
+    outline: none;
+    background-color: transparent;
 }
 
-textarea{
-    border: none;
-    border-bottom: 1px solid white;
+.input input[type="submit"] {
+    margin-top: 30px;
+    padding: 10px 5px;
+    width: 150px;
+    background-color: #FA1;
+    color: white;
+    outline: none;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-
-
-input, textarea{
-    margin-left: 80px;
-    background-color: #04014E;
-
+.input input[type="submit"]:hover {
+    background-color: rgba(255, 172, 17, 0.76);
 }
 
-label{
+div .remember {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+div .input p {
+    color: rgba(255, 172, 17, 0.76);
+}
+
+.container {
+    display: flex;
+}
+
+.circle {
+    width: 30px;
+    color: rgb(34, 25, 25);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
     font-size: 20px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleparent {
+    position: relative;
+}
+
+.circleparent .text {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 100%);
+    /* Pour Placer le texte à droite du cercle spécial */
+    transform: translateY(-100%);
+    /* Pour Centrer verticalement */
+    color: rgb(34, 25, 25);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.circle.special {
+    border-radius: 90%;
+    /* Pour changer le border-radius du cercle spécial */
+    background-color: rgb(34, 25, 25);
+    /* Pour changer la couleur de fond du cercle spécial */
     color: #fff;
-    width: 10px;
-    margin-left: 30px;
 }
 
-button{
-    background: linear-gradient(#AC5C74,#AC5C74,#ac5c748e, #ac5c740f);
-    border: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 15px;
-    
+.circleparent button {
+    border-radius: 300px;
+    width: 100%;
+    background-color: rgba(255, 172, 17, 0.76);
 }
 
-
-
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-}
-
-@media screen and (max-width: 768px) {
-    .container {
+/* Media queries */
+@media only screen and (max-width: 767px) {
+    /* Styles spécifiques aux smartphones */
+    section {
         flex-direction: column;
-        width: 100%;
         height: auto;
     }
-    
-    .form-users, .imageBox {
-        width: 90%; /* Réduire la largeur pour s'adapter aux petits écrans */
-        margin: 20px auto; /* Centrer les éléments */
-        border: none;
+    section .img {
+        height: 50%;
+        margin-bottom: 10px;
     }
-    .form-users {
-        padding: 5%;
+    .contenu {
+        flex-grow: 1;
+        height: 50%;
+        padding: 20px;
     }
-    .imageBox {
-        padding: 5%;
-    }
-    input, select, textarea {
-        margin-left: 0;
-        width: 60%; /* Utiliser toute la largeur disponible */
-        padding: 8px; /* Augmenter la taille du padding pour s'adapter aux petits écrans */
-        font-size: 16px; /* Réduire la taille de la police pour s'adapter aux petits écrans */
-    }
-    button {
-        width: 100%; /* Utiliser toute la largeur disponible */
-        margin: 20px auto; /* Centrer le bouton */
-    }
-
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles spécifiques aux tablettes */
+    /* Ajoutez vos styles pour les tablettes ici */
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles spécifiques aux écrans de bureau */
+    /* Ajoutez vos styles pour les écrans de bureau ici */
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Styles spécifiques aux écrans Retina */
+    /* Ajoutez vos styles pour les écrans Retina ici */
+}
