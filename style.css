@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#AC5C74;
+
+}
+
+.form-users{
+    height: 500px;
+    background-color: #04014E;
+    padding-top: 5%;
+    margin-left: 20%;
+    margin-right: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+    color: #AC5C74;
+}
+
+.imageBox{
+    position: relative;
+    margin-right: 20%;
+    height: 500px;
+    padding-top: 0%;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(251, 197, 214, 0.5);
+    border-right:2px solid  rgba(251, 197, 214, 0.5);
+    border-bottom:2px solid  rgba(251, 197, 214, 0.5);
+}
+
+.btn{
+    width: 30px;
+}
+
+.reverse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input{
+    margin: 20px;
+    padding: 5px;
+    width: 200px;
+    height: 20px;
+}
+
+::placeholder{
+    color: white;
+    font-size: 18px;
+}
+
+
+input, textarea, select{
+    margin-left: 80px;
+}
+input,select{
+    border: none;
+    outline: none;
+}
+
+textarea{
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+
+
+input, textarea{
+    margin-left: 80px;
+    background-color: #04014E;
+
+}
+
+label{
+    font-size: 20px;
+    color: #fff;
+    width: 10px;
+    margin-left: 30px;
+}
+
+button{
+    background: linear-gradient(#AC5C74,#AC5C74,#ac5c748e, #ac5c740f);
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    
+    .form-users, .imageBox {
+        width: 90%; /* Réduire la largeur pour s'adapter aux petits écrans */
+        margin: 20px auto; /* Centrer les éléments */
+        border: none;
+    }
+    .form-users {
+        padding: 5%;
+    }
+    .imageBox {
+        padding: 5%;
+    }
+    input, select, textarea {
+        margin-left: 0;
+        width: 60%; /* Utiliser toute la largeur disponible */
+        padding: 8px; /* Augmenter la taille du padding pour s'adapter aux petits écrans */
+        font-size: 16px; /* Réduire la taille de la police pour s'adapter aux petits écrans */
+    }
+    button {
+        width: 100%; /* Utiliser toute la largeur disponible */
+        margin: 20px auto; /* Centrer le bouton */
+    }
+
+}
+
