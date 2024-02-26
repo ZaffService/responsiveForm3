@@ -157,19 +157,42 @@ body {
     section .img {
         height: 400px; /* Ajustez la hauteur de l'image pour cette plage de taille d'écran */
     }
+
+
+
     .contenu {
         height: auto; /* Réinitialisez la hauteur pour s'adapter au contenu */
         padding: 10px; /* Ajustez le rembourrage */
     }
+
+    .circleparent .text {
+        font-size: 10px;
+    }
 }
 
 /* Media query pour les écrans entre 992px et 1199px */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    section .img {
-        height: 500px; /* Ajustez la hauteur de l'image pour cette plage de taille d'écran */
+@media only screen and (max-width: 700px){
+    body{
+        background-image: url(form2.png);
+        background-size: cover;
     }
+
+    section .contenu .formulaire h2 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 1px;
+        display:block;
+    }
+
     .contenu {
         padding: 15px; /* Ajustez le rembourrage */
+        height: 80%;
+    }
+
+    .circleparent .text {
+        font-size: 10px;
+       
     }
 }
 
