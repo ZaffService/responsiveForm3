@@ -9,7 +9,7 @@
 section {
     position: relative;
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
 }
 
@@ -18,7 +18,7 @@ section .img {
     margin-top: 1%;
     left: 0;
     width: 100%;
-    height: 680px;
+    height: 600px;
     background: url('form2.png');
     background-position: center;
     background-size: cover;
@@ -29,8 +29,8 @@ section .contenu {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 680px;
+    width: 80%;
+    height: 600px;
     background-color: rgb(34, 25, 25);
 }
 
@@ -73,7 +73,7 @@ input::placeholder {
 }
 
 .input input[type="submit"] {
-    margin-top: 30px;
+    margin-bottom: 15px;
     padding: 10px 5px;
     width: 150px;
     background-color: #FA1;
@@ -90,7 +90,7 @@ input::placeholder {
 
 div .remember {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 div .input p {
@@ -123,7 +123,7 @@ div .input p {
 .circleparent .text {
     position: absolute;
     top: 50%;
-    left: calc(100% - 100%);
+    left: calc(100% - 50%);
     /* Pour Placer le texte à droite du cercle spécial */
     transform: translateY(-100%);
     /* Pour Centrer verticalement */
@@ -145,36 +145,36 @@ div .input p {
     width: 100%;
     background-color: rgba(255, 172, 17, 0.76);
 }
+html,
+body {
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
 
-/* Media queries */
-@media only screen and (max-width: 767px) {
-    /* Styles spécifiques aux smartphones */
-    section {
-        flex-direction: column;
-        height: auto;
-    }
+
+/* Media query pour les écrans entre 768px et 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     section .img {
-        height: 50%;
-        margin-bottom: 10px;
+        height: 400px; /* Ajustez la hauteur de l'image pour cette plage de taille d'écran */
     }
     .contenu {
-        flex-grow: 1;
-        height: 50%;
-        padding: 20px;
+        height: auto; /* Réinitialisez la hauteur pour s'adapter au contenu */
+        padding: 10px; /* Ajustez le rembourrage */
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* Styles spécifiques aux tablettes */
-    /* Ajoutez vos styles pour les tablettes ici */
-}
-
+/* Media query pour les écrans entre 992px et 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    /* Styles spécifiques aux écrans de bureau */
-    /* Ajoutez vos styles pour les écrans de bureau ici */
+    section .img {
+        height: 500px; /* Ajustez la hauteur de l'image pour cette plage de taille d'écran */
+    }
+    .contenu {
+        padding: 15px; /* Ajustez le rembourrage */
+    }
 }
 
+/* Media query pour les écrans à haute résolution */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Styles spécifiques aux écrans Retina */
-    /* Ajoutez vos styles pour les écrans Retina ici */
+    /* Ajoutez des styles spécifiques pour les écrans à haute résolution si nécessaire */
 }
+
