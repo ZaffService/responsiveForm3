@@ -301,7 +301,7 @@ body {
         /* Pour changer le border-radius du cercle spécial */
         background-color: rgb(34, 25, 25);
         /* Pour changer la couleur de fond du cercle spécial */
-        color: #fff;
+        color: white;
     }
     
     .circleparent button {
